@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>DNA Complimenter</title>
+</head>
+<body>
+    <h1>DNA Compliment</h1>
+    <form name="form" action="">
+        <p>Enter the string of DNA: <input type="text" name="input"></p>
+    </form>
+        <button type="button" onclick="compliment()">Submit</button>
+        <p></p>
+        <p id="msg"></p>
+    <script>
+        function compliment(){
+        let x = document.forms["form"]["input"].value;
+        var chars = {'a':'T','t':'A','g':'C','c':'G','A':'T','T':'A','G':'C','C':'G'};
+        x = x.replace(/[atgcATGC]/gi, m=>chars[m]);
+        document.getElementById("msg").innerHTML= 'This is your DNA Compliment: '+ x;
+        }
+    </script>
+
+</body>
+</html>
