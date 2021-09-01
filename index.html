@@ -10,7 +10,7 @@
 <body>
     <h1>DNA to RNA</h1>
     <form name="form" action="">
-        <p>Enter the string of DNA: <input type="text" name="input"></p>
+        <p>Enter the string of DNA: <input type="text" name="input" onkeyup="this.value = this.value.toUpperCase(); required"></p>
     </form>
         <button type="button" onclick="compliment()">Transcript</button>
         <p></p>
@@ -18,8 +18,8 @@
     <script>
         function compliment(){
         let x = document.forms["form"]["input"].value;
-        var chars = {'a':'T','t':'A','g':'C','c':'G','A':'T','T':'A','G':'C','C':'G'};
-        x = x.replace(/[atgcATGC]/gi, m=>chars[m]);
+        var chars = {'A':'T','T':'A','G':'C','C':'G'};
+        x = x.replace(/[ATGC]/gi, m=>chars[m]);
         document.getElementById("msg").innerHTML= 'This is your DNA Compliment RNA: '+ x;
         }
     </script>
