@@ -18,9 +18,9 @@
     <script>
         function compliment(){
         let x = document.forms["form"]["input"].value;
-        var chars = {'A':'T','T':'A','G':'C','C':'G'};
+        var chars = {'A':'U','T':'A','G':'C','C':'G'};
         x = x.replace(/[ATGC]/gi, m=>chars[m]);
-        document.getElementById("msg").innerHTML= 'This is your DNA Compliment RNA: '+ x;
+        document.getElementById("msg").innerHTML= 'This is your DNA Compliment mRNA: '+ x;
         }
     </script>
 
